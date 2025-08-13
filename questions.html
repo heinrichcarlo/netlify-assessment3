@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Assessment FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../css/styles.css" rel="stylesheet">
+    <style>
+        .faq-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .faq-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            margin-right: 15px;
+            color: var(--primary);
+        }
+        
+        .faq-answer {
+            color: var(--text);
+            line-height: 1.7;
+        }
+        
+        .faq-answer code {
+            background: #f3f4f6;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .faq-answer pre {
+            background: #1e1e1e;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            margin: 15px 0;
+        }
+        
+        .faq-divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-question-circle logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Netlify Assessment</h1>
+                    <div class="tagline">FAQ & Interview Responses</div>
+                </div>
+            </div>
+            <nav>
+                <a href="../index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Back Home
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="faq-container">
+        <div class="faq-header">
+            <h1>Assessment Questions & Answers</h1>
+            <p>Detailed responses to the Netlify interview questions</p>
+        </div>
+        
+        <!-- Question 1 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-code"></i>
+                How did you build this site and what challenges did you face?
+            </div>
+            <div class="faq-answer">
+                <p>I built this site with <strong>HTML/CSS/JavaScript</strong> for optimal compatibility with Netlify's static hosting. The authentication uses <strong>Firebase</strong> for its security and scalability with static sites. The UI features <strong>Poppins fonts</strong> and <strong>Font Awesome icons</strong> for a modern, accessible design.</p>
+                
+                <p><strong>Key Challenge:</strong> Initially, Firebase functions (<code>registerUser</code>, <code>loginUser</code>) were undefined due to script loading issues. I resolved this by:</p>
+                <ul>
+                    <li>Ensuring Firebase SDKs load before my <code>auth.js</code></li>
+                    <li>Explicitly attaching functions to <code>window.authFunctions</code></li>
+                    <li>Adding error boundaries and console logs for debugging</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-thumbs-up"></i>
+                What did you think of Netlify's service?
+            </div>
+            <div class="faq-answer">
+                <p><strong>Impressive Features:</strong></p>
+                <ul>
+                    <li><strong>Git-integrated deploys:</strong> Streamlined my development workflow</li>
+                    <li><strong>Forms handling:</strong> Eliminated backend needs for submissions</li>
+                    <li><strong>DNS management:</strong> Intuitive domain setup process</li>
+                </ul>
+                
+                <p><strong>Suggested Improvements:</strong></p>
+                <ul>
+                    <li>More descriptive build logs for JavaScript errors (e.g., line numbers)</li>
+                    <li>Beginner-friendly tutorials for Firebase integration</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+                <hr class="faq-divider">
+        
+        <!-- Question 2 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-heart"></i>
+                Support Engineer preferences
+            </div>
+            <div class="faq-answer">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Most Enjoy:</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i>
+                                Debug a customer's build using new frameworks
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i>
+                                Develop code examples to share with customers
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i>
+                                Work with customers on workflow/integration challenges
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i>
+                                Submit bug reports and potential fixes
+                            </li>
+                            <li style="padding: 8px 0;">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i>
+                                Create video tutorials for features
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: #dc3545; margin-bottom: 15px;">Least Enjoy:</h3>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>
+                                Respond to 20+ support emails daily
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>
+                                Engage multiple users simultaneously via chat
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>
+                                Manage a Support team
+                            </li>
+                            <li style="padding: 8px 0; border-bottom: 1px dashed #eee;">
+                                <i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>
+                                Respond to customers on Twitter
+                            </li>
+                            <li style="padding: 8px 0;">
+                                <i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>
+                                Explain pricing to prospective customers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 20px; font-style: italic; color: #666;">
+                    Note: I enjoy technical troubleshooting and creative problem-solving most, while high-volume repetitive communication is less appealing. However, I recognize all these tasks are important for excellent customer support.
+                </p>
+            </div>
+        </div>
+
+        <hr class="faq-divider">
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-book"></i>
+                Example of well-documented technical product
+            </div>
+            <div class="faq-answer">
+                <p><strong>Firebase Authentication Documentation</strong> (<a href="https://firebase.google.com/docs/auth" target="_blank">firebase.google.com/docs/auth</a>) stands out because:</p>
+                
+                <ul>
+                    <li><strong>Clear code snippets</strong> for every use-case (email/password, social logins)</li>
+                    <li><strong>Error handling examples</strong> with common solutions</li>
+                    <li><strong>Step-by-step guides</strong> with visual aids (screenshots, GIFs)</li>
+                    <li><strong>Interactive API reference</strong> with search functionality</li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 4 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-server"></i>
+                DNS challenges for non-technical users
+            </div>
+            <div class="faq-answer">
+                <p><strong>Challenge 1: Nameserver Configuration</strong></p>
+                <p>Many users struggle to update nameservers with their registrar (e.g., GoDaddy, Namecheap) and in some cases customers don't know where the domain is registered and who holds the current NS. Without this step, DNS changes won't propagate. A visual guide or automated domain connection (like Netlify's current flow) significantly helps.</p>
+                
+                <p><strong>Challenge 2: SSL/TLS Setup</strong></p>
+                <p>Users often confuse DNS records (A, CNAME) with SSL certificates. While Netlify's automatic HTTPS is excellent, users may not understand why mixed content warnings occur when they hardcode <code>http://</code> assets in their sites.</p>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 5 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-bug"></i>
+                Troubleshooting "site won't build" error
+            </div>
+            <div class="faq-answer">
+                <p><strong>Investigation Steps:</strong></p>
+                <ol>
+                    <li>Check <strong>build logs</strong> for the exact error preceding exit code 2</li>
+                    <li>Verify the <code>build</code> command in Netlify UI matches the repo's requirements</li>
+                    <li>Look for <strong>dependency conflicts</strong> (Node.js version mismatches)</li>
+                    <li>Check for missing files in required directories (e.g., <code>package.json</code>)</li>
+                </ol>
+                
+                <p><strong>Sample Customer Response:</strong></p>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary);">
+                    <p><em>Hi Customer,</em></p>
+                    <p><em>Thank you for reaching out about your build issue. I see the process failed with exit code 2, which typically indicates a script error. To help resolve this, could you:</em></p>
+                    <ol>
+                        <li><em>Confirm your build command in Netlify matches your local environment?</em></li>
+                        <li><em>Share any recent changes to package.json or build scripts?</em></li>
+                    </ol>
+                    <p><em>I'll be happy to investigate further with these details. We appreciate your patience!</em></p>
+                    <p><em>Best regards,<br>Heinrich Carlo Edradan III</em></p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 6 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-route"></i>
+                Redirect configuration examples
+            </div>
+            <div class="faq-answer">
+                <p><strong>301 Redirect Rule</strong> (in <code>netlify.toml</code>):</p>
+                <pre>[[redirects]]
+  from = "/netlify/:anything"
+  to = "https://www.google.com/search?q=:anything"
+  status = 301</pre>
+                
+                <p><strong>Proxy Redirect Rule</strong>: https://shimmering-buttercream-b2ba2d.netlify.app/search?q=netlify</p>
+                <pre>[[redirects]]
+  from = "/search/:query"
+  to = "https://www.google.com/search:query"  
+  status = 200
+  force = true</pre>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 7 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-cogs"></i>
+                Function deployment experience
+            </div>
+            <div class="faq-answer">
+                <p>I deployed a simple "Hello World" function:</p>
+                
+                <p><strong>1. Created</strong> <code>netlify/functions/hello.js</code>:</p>
+                <pre>exports.handler = async () => {
+  return { 
+    statusCode: 200, 
+    body: "Hello World!" 
+  };
+};</pre>
+                
+                <p><strong>2. Configured</strong> in <code>netlify.toml</code>:</p>
+                <pre>[functions]
+  directory = "netlify/functions"</pre>
+                
+                <p><strong>Challenge:</strong> Initially received 404 errors because the functions directory was incorrectly specified.</p>
+                <p><strong>Solution:</strong> Verified the directory path matched Netlify's requirements and tested locally using Netlify Dev.</p>
+            </div>
+        </div>
+        
+        <hr class="faq-divider">
+        
+        <!-- Question 8 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <i class="fas fa-shield-alt"></i>
+                Responding to security reports
+            </div>
+            <div class="faq-answer">
+                <p><strong>Immediate Response:</strong></p>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <p><em>"Thank you for reporting this. We take security very seriously and have initiated an urgent investigation. We'll provide updates as soon as possible."</em></p>
+                </div>
+                
+                <p><strong>Investigation Steps:</strong></p>
+                <ol>
+                    <li>Attempt to reproduce in staging environment</li>
+                    <li>Review server logs and monitoring systems</li>
+                    <li>Isolate potentially affected systems</li>
+                </ol>
+                
+                <p><strong>Escalation Path:</strong></p>
+                <ul>
+                    <li>Security Team → CTO → PR/Comms (if public disclosure needed)</li>
+                    <li>Document all steps for post-mortem analysis</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p style="text-align: center;">Netlify Assessment FAQ | Created with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+</body>
+</html>

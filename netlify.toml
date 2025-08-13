@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/search/:query" 
+  to = "https://www.google.com/search:query"  
+  status = 200
+  force = true  
+
+[functions]
+  directory = "netlify/functions"
+
